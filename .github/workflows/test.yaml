@@ -34,8 +34,7 @@ jobs:
     - name: lint
       run: |
         go get \
-        golang.org/x/lint/golint \
-        golang.org/x/xerrors
+        golang.org/x/lint/golint
         golint -set_exit_status ./...
       if: "matrix.os == 'ubuntu-latest' || matrix.os == 'macOS-latest'"
     - name: test
