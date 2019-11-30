@@ -3,6 +3,7 @@ package httpsgit
 import (
 	"context"
 	"flag"
+	"fmt"
 	"io"
 )
 
@@ -23,6 +24,9 @@ func (cp *cmdPush) run(ctx context.Context, argv []string, outStream io.Writer, 
 	if err := fs.Parse(argv); err != nil {
 		return err
 	}
+
+	args := fs.Args()
+	fmt.Println(args)
 
 	return nil
 }
