@@ -37,8 +37,7 @@ jobs:
       run: go get ./...
     - name: lint
       run: |
-        go get \
-        golang.org/x/lint/golint
+        go get golang.org/x/lint/golint
         golint -set_exit_status ./...
     - name: test
       run: go test -coverprofile coverage.out -covermode atomic ./...
